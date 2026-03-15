@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "ChambaPe",
+    "slug": "chambape",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#E8321A"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.chambape.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Necesitamos tu ubicación para mostrarte técnicos cercanos.",
+        "NSCameraUsageDescription": "Para subir fotos de tu trabajo.",
+        "NSPhotoLibraryUsageDescription": "Para seleccionar fotos de tu galería."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#E8321A"
+      },
+      "package": "com.chambape.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Necesitamos tu ubicación para encontrar técnicos cercanos."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#E8321A"
+        }
+      ]
+    ],
+    "scheme": "chambape",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
